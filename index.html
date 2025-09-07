@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moi-Techch - Valaiyadi Valaiyai</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      background-color: #fff;
+      color: #222;
+    }
+
+    /* Header styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Logo icon shapes with CSS */
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #2563eb;
+      clip-path: polygon(
+        30% 0%, 70% 0%, 70% 40%, 100% 40%, 100% 60%, 70% 60%, 70% 100%, 30% 100%, 30% 60%, 0% 60%, 0% 40%, 30% 40%
+      );
+      position: relative;
+    }
+    /* Install a "bag" shape with white rectangles on the icon - symbolic */
+    .logo-icon::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 5px;
+      width: 30px;
+      height: 7px;
+      background: white;
+      border-radius: 2px;
+    }
+    .logo-icon::after {
+      content: "";
+      position: absolute;
+      bottom: 8px;
+      left: 5px;
+      width: 30px;
+      height: 7px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    .logo-text {
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+    .logo-subtext {
+      font-size: 0.75rem;
+      color: #2563eb;
+      font-weight: 600;
+      line-height: 1;
+      user-select: none;
+      margin-top: 0.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      user-select: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      padding: 0.3rem 0.25rem;
+    }
+
+    nav a:hover, nav a:focus {
+      color: #2563eb;
+    }
+
+    .lang-button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background-color 0.3s ease;
+    }
+    .lang-button:hover, .lang-button:focus {
+      background-color: #1e40af;
+      outline: none;
+    }
+
+    /* Hero image container */
+    .hero-image {
+      width: 100%;
+      height: 480px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* The placeholder image styling with fallback */
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      user-select: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+      nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .hero-image {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container" aria-label="Logo and site name">
+      <div class="logo-icon" aria-hidden="true"></div>
+      <div>
+        <div class="logo-text" aria-label="MOI-TECCH">MOI-TECCH</div>
+        <div class="logo-subtext" aria-label="Valaiyadi Valaiyai">VALAIYADI VALAIYAI...</div>
+      </div>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="#" tabindex="0">Home</a>
+      <a href="#" tabindex="0">Moitech App</a>
+      <a href="#" tabindex="0">Contact Us</a>
+      <a href="#" tabindex="0">Login</a>
+      <a href="#" tabindex="0">Register</a>
+      <button class="lang-button" aria-label="Switch to Tamil language" tabindex="0">தமிழ்</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-image" aria-label="Wedding ceremony scene with bride, groom, and guests surrounded by floral decorations and banana leaves">
+      <img 
+        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e883e7c-4095-4831-b9fa-8ef28de97b99.png" 
+        alt="Traditional South Indian wedding ceremony in a decorated hall with bride wearing purple and gold traditional saree adorned with gold jewelry and flowers, groom dressed in white with traditional turban, guests in ethnic attire, lush green banana leaves and garlands in red, white, and yellow colors hanging around the hall" 
+        onerror="this.style.display='none';" 
+      />
+    </section>
+  </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Moitech - Valaiyadi Valaiyai</title>
+<style>
+  /* Reset some default styles */
+  body, h1, h2, p, ul, li, a, div {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+  /* Header styles */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+  }
+  .logo-area {
+    display: flex;
+    align-items: center;
+  }
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+  .logo-text {
+    font-weight: bold;
+    color: #3b5fda; /* Blue shade */
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  .logo-subtext {
+    color: #3b5fda;
+    font-size: 14px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+  nav a:hover {
+    color: #3b5fda;
+  }
+  .login-register-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .locale-button {
+    background-color: #3b5fda;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .locale-button:hover {
+    background-color: #3451b3;
+  }
+
+  /* Main content styles */
+  main {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  main h2 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  main p {
+    color: #999;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  /* Grid container */
+  .objectives-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  /* Individual objective box */
+  .objective {
+    flex: 1;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .objective img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  .objective-caption {
+    background-color: #3b5fda;
+    color: #aae0ff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px;
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .objectives-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .objective {
+      max-width: 90%;
+      margin-bottom: 30px;
+    }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h2>Objectives of Moitech</h2>
+  <p>Do moi !!! Let's get moi !!!</p>
+  <p>Preserve our culture in a modern way.</p>
+  <p>Our moi-tech towards the new<br />dimension of modern culture.</p>
+
+  <div class="objectives-container">
+    <div class="objective">
+      <img src="https://img.icons8.com/ios/144/000000/lock--v1.png" alt="Secure Computer" />
+      <div class="objective-caption">Moi @ Computer</div>
+    </div>
+    <div class="objective">
+      <img src="https://img.icons8.com/ios/144/000000/business-portfolio.png" alt="Business Notes" />
+      <div class="objective-caption">Renewing Old Moi Notes</div>
+    </div>
+    <div class="objective">
+      <img src="https://img.icons8.com/ios/144/000000/smartphone.png" alt="Mobile in Hand" />
+      <div class="objective-caption">Moi in Your Hands</div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moi-Tecch Special Features</title>
+    <style>
+        /* Reset some default */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f7f8fa;
+            color: #333;
+        }
+        /* Header Styling */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        /* Logo container */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 40px;
+            width: 40px;
+        }
+        .logo-text {
+            font-weight: 700;
+            font-size: 20px;
+            color: #2051ff;
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-text span:first-child {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .logo-text span:last-child {
+            font-weight: 600;
+            font-size: 13px;
+            color: #2069ff;
+            margin-top: 1px;
+            line-height: 1.1;
+        }
+        /* Nav */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 14px;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #2051ff;
+        }
+        /* Language Button */
+        .lang-btn {
+            background-color: #2051ff;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-size: 13px;
+        }
+        .lang-btn:hover {
+            background-color: #123ecf;
+        }
+        /* Main content */
+        main {
+            max-width: 1000px;
+            margin: 50px auto 80px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* Decorative icon above heading */
+        .decorative-icon {
+            width: 40px;
+            height: 30px;
+            margin: 0 auto 10px;
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 22px;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            position: relative;
+        }
+        /* Horizontal line to the left of h2 below the icon */
+        h2::before {
+            content: "";
+            position: absolute;
+            left: calc(50% - 130px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 120px;
+            height: 1px;
+            background-color: #c0c0c0;
+        }
+        /* Special features grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 22px 28px;
+            justify-content: center;
+        }
+        .feature-item {
+            background: #fff;
+            padding: 25px 15px;
+            box-shadow: 0 1px 3px #ddd;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            min-height: 130px;
+            cursor: default;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 14px;
+            color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            h2::before {
+                left: 20%;
+                width: 70px;
+            }
+            h2 {
+                gap: 30px;
+            }
+        }
+        @media (max-width: 600px) {
+            nav {
+                gap: 15px;
+                font-size: 13px;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            header {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+        @media (max-width: 400px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Using fontawesome free icons from CDN for the icons shown -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-papbYY+XbPVsq9H7S3t/qfWEylr5PJOXNSRPt7s61KPWELK7YyC+HkFJsaTWWMnGyfrHf8JGxjz0c3D4u/8mSA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <main>
+        <div class="decorative-icon">
+            <!-- Blue decorative icon (replicated as SVG) -->
+            <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 11C15 6 20 6 20 6S25 6 30 11C30 11 26 14 20 14C14 14 10 11 10 11Z" fill="#36B5F6"/>
+                <path d="M30 11C31 15 24 30 20 30C16 30 9 16 10 11" fill="#36B5F6"/>
+            </svg>
+        </div>
+        <h2>Moi-Tecch Special Features</h2>
+        <section class="features-grid">
+            <div class="feature-item">
+                <i class="fa-solid fa-cloud-arrow-up feature-icon"></i>
+                <p>Manage Moi Accounts in Online</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-server feature-icon"></i>
+                <p>Facility to Add or Update MOI's</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-user-pen feature-icon"></i>
+                <p>Details of The Individual's MOI</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-comment-sms feature-icon"></i>
+                <p>SMS Reminder of The Events</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-receipt feature-icon"></i>
+                <p>Instant Computer Receipt for MOI</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-chart-pie feature-icon"></i>
+                <p>Analyze The Amount of MOI Giving / Received</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-calendar-day feature-icon"></i>
+                <p>Details of The Past/Future Events</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-calculator feature-icon"></i>
+                <p>Accurate MOI Calculation</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-mobile-screen-button feature-icon"></i>
+                <p>Details of The MOI in Your Mobile</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-sort-alpha-down feature-icon"></i>
+                <p>Moi According to The City/Town Name</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Moitech Events Overview</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  /* Navbar styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Logo container */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #1a4fcf;
+    text-decoration: none;
+  }
+
+  .logo svg {
+    height: 30px;
+    width: 30px;
+    fill: #1a4fcf;
+  }
+
+  .logo-text {
+    line-height: 1;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: #1a4fcf;
+    letter-spacing: 1.2px;
+  }
+
+  /* Nav menu */
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-weight: 500;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Language button */
+  .lang-btn {
+    background-color: #1a4fcf;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  .lang-btn:hover {
+    background-color: #1540a9;
+  }
+
+  /* Main container */
+  .main-container {
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  /* Decorative icon - simplified version */
+  .decorative-icon {
+    margin: 0 auto 10px;
+    width: 40px;
+    height: 30px;
+    fill: #00bfff;
+  }
+
+  /* Heading */
+  .main-container h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 10px 0 60px;
+    color: #333;
+  }
+
+  /* Events cards container */
+  .events-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  /* Single event */
+  .event {
+    max-width: 300px;
+  }
+  .event img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.15);
+  }
+  .event-title {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #333333;
+  }
+
+  /* Arrows on sides */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #1a4fcf;
+    cursor: pointer;
+    user-select: none;
+  }
+  .arrow.left {
+    left: 15px;
+  }
+  .arrow.right {
+    right: 15px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 960px) {
+    .events-cards {
+      gap: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 700px) {
+    .events-cards {
+      flex-direction: column;
+      gap: 45px;
+    }
+    .event {
+      max-width: 90vw;
+      margin: 0 auto;
+    }
+    .arrow {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+<!-- Main content -->
+<main class="main-container" role="main">
+
+  <!-- Decorative icon -->
+  <svg class="decorative-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M12 2c1.7 1 3 3 3 3s-1-2-3-2-3 2-3 2 1.3-2 3-3zm0 19a5 5 0 100-10 5 5 0 000 10z" />
+    <path d="M12 12c0 3-2 4-2 4s2 0 2-2 0-2 0-2z" />
+  </svg>
+
+  <h2>Events Overview</h2>
+
+  <!-- Events cards -->
+  <section class="events-cards" aria-label="Events Overview">
+    <article class="event">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/02/43/indian-wedding-1868668_960_720.jpg" alt="Wedding Ceremony Indian bride and groom with friends and family" />
+      <h3 class="event-title">Wedding Ceremony</h3>
+    </article>
+
+    <article class="event">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/17/24/engagement-1281060_960_720.jpg" alt="Closeup of couple holding hands with henna and bangles" />
+      <h3 class="event-title">Engagement</h3>
+    </article>
+
+    <article class="event">
+      <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/indian-1994900_960_720.jpg" alt="Little girl getting earrings in traditional ceremony" />
+      <h3 class="event-title">Ear Piercing Ceremony</h3>
+    </article>
+  </section>
+
+  <!-- Left and right arrows for slider (non-functional in this snippet) -->
+  <div class="arrow left" aria-label="Previous event">&#60;</div>
+  <div class="arrow right" aria-label="Next event">&#62;</div>
+
+</main>
+
+</body>
+</html>
+<footer style="background-color: #0c1121; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Company Section -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h3 style="font-weight: bold;">Company</h3>
+      <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: #a8a8a8;">
+        <li>» <a href="index.html" style="color: #a8a8a8; text-decoration: none;">Home</a></li>
+        <li>» <a href="about.html" style="color: #a8a8a8; text-decoration: none;">About Us</a></li>
+        <li>» <a href="moitech-app.html" style="color: #a8a8a8; text-decoration: none;">Moitech App</a></li>
+        <li>» <a href="contact.html" style="color: #a8a8a8; text-decoration: none;">Contact Us</a></li>
+        <li>» <a href="register.html" style="color: #a8a8a8; text-decoration: none;">Register</a></li>
+        <li>» <a href="login.html" style="color: #a8a8a8; text-decoration: none;">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h3 style="font-weight: bold;">Contact us</h3>
+      <p style="color:#8a8a8a; line-height: 1.6;">
+        <span style="display: flex; align-items: center; margin-bottom: 8px;">
+          <svg width="14" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8a8a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>  
+          <strong>MOITECH</strong>
+        </span>
+        2/250 B, New Street,<br>
+        Anna Nagar,<br>
+        Madurai District - 625 015
+      </p>
+      <p style="color:#8a8a8a; margin: 5px 0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a8a8a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2c-3.09-.49-5.95-2.11-8.42-4.57S3.36 9.27 2.87 6.18A2 2 0 0 1 5 4h3a2 2 0 0 1 2 1.72 12.07 12.07 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 11a16 16 0 0 0 6 6l1.36-1.36a2 2 0 0 1 2.11-.45 12.07 12.07 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"></path>
+        </svg> +91-96888 80990
+      </p>
+      <p style="color:#8a8a8a; margin: 5px 0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a8a8a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2c-3.09-.49-5.95-2.11-8.42-4.57S3.36 9.27 2.87 6.18A2 2 0 0 1 5 4h3a2 2 0 0 1 2 1.72 12.07 12.07 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 11a16 16 0 0 0 6 6l1.36-1.36a2 2 0 0 1 2.11-.45 12.07 12.07 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"></path>
+        </svg> +91-74484-30990
+      </p>
+      <p style="color:#8a8a8a; margin: 5px 0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a8a8a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+          <path d="M4 4h16v16H4z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg> support@moitech.in
+      </p>
+    </div>
+
+    <!-- App Download Section -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px; text-align: center;">
+      <h3 style="font-weight: bold;">Download Moitech Android App</h3>
+      <a href="https://play.google.com/store/apps/details?id=your.app.id" target="_blank" style="display: inline-block; margin: 20px 0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="width: 180px; height: auto;"/>
+      </a>
+      <h4 style="color: #fff; font-weight: normal; margin-top: 20px;">Connect with us</h4>
+      <div style="font-size: 18px;">
+        <a href="https://facebook.com/moitech" target="_blank" aria-label="Facebook" style="color:#fff; margin-right: 15px; text-decoration: none;">
+          <i class="fab fa-facebook-f"></i> &#xf09a;  <!-- Facebook icon Unicode as fallback -->
+        </a>
+        <a href="https://twitter.com/moitech" target="_blank" aria-label="Twitter" style="color:#fff; margin-right: 15px; text-decoration: none;">
+          <i class="fab fa-twitter"></i> &#xf099; <!-- Twitter icon Unicode fallback-->
+        </a>
+        <a href="https://instagram.com/moitech" target="_blank" aria-label="Instagram" style="color:#fff; margin-right: 15px; text-decoration: none;">
+          <i class="fab fa-instagram"></i> &#xf16d; <!-- Instagram icon fallback -->
+        </a>
+        <a href="https://youtube.com/moitech" target="_blank" aria-label="YouTube" style="color:#fff; text-decoration: none;">
+          <i class="fab fa-youtube"></i> &#xf167; <!-- YouTube icon fallback -->
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align: center; color: #6a6a6a; padding-top: 20px; font-size: 14px;">
+    Copyright © 2025 - Moitech | All rights reserved.
+  </div>
+</footer>
+
+<!-- Note: For icons using font-awesome classes, add this line in your <head>:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+-->
